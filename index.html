@@ -82,9 +82,9 @@
                         <!----------------------------------- Cards -------------------- -->
                         <div class="container-fluid">
                             <div class="row">
-                                <div class="col">
-                                    <div class="card" style="width: 18rem;">
-                                        <div v-for="(lessons, index) in sortedLessons" :key="`lesson--${index}`" class="">
+                                <div v-for="(lessons, index) in sortedLessons" :key="`lesson--${index}`" class="col">
+                                    <div  class="card" style="width: 18rem;">
+                                        <div  class="">
                                             <img v-bind:src="lessons.image" width="250" height="200">
                                             <div class="card-body">
                                                 <h4 class="card-title">Subject: {{ lessons.subject }}</h4>
@@ -112,7 +112,7 @@
                             </div>
                             <!-- cart-->
                             <h4>Your cart</h4>
-                            <div class="cart">
+                            <div class="">
                                 <div class="cart__item">
                                     <div style="width: auto;">Image</div>
                                     <div>Subject</div>
@@ -144,14 +144,7 @@
                                     <label for="name">Phone Number</label>
                                     <input v-model="user.number" type="tel" required>
                                 </div>
-                                <div>
-                                    <label for="name">User Id</label>
-                                    <input v-model="user.id" type="tel" required>
-                                </div>
-                                <div>
-                                    <label for="name">Space</label>
-                                    <input v-model="user.space" type="tel" required>
-                                </div>
+                              
                                 <input type="submit" @click="submit" value="Checkout">
                             </div>
                         </div>
