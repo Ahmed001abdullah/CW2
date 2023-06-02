@@ -14,11 +14,11 @@ app.use((req, res, next) => {
     next();
 });
 
-MongoClient.connect("mongodb+srv://fahadkhan09922:individualproject@cluster0.5ud924m.mongodb.net/", (err, client) => {
+MongoClient.connect("mongodb+srv://ahmedabdula2002:ahmedabdullah123@cluster0.ojcymfm.mongodb.net/", (err, client) => {
     if (err) {
         console.error('Error connecting to the database:', err);
     } else {
-        const db = client.db('cw2');
+        const db = client.db('cwi_db');
         console.log("Database connected");
 
         // Create Lesson Model
@@ -88,7 +88,7 @@ MongoClient.connect("mongodb+srv://fahadkhan09922:individualproject@cluster0.5ud
             const order = req.body; // Assuming the order data is sent in the request body
 
             // Get the reference to the orders collection in MongoDB
-            const ordersCollection = client.db(cw2).collection('order');
+            const ordersCollection = client.db(cwi_db).collection('order');
 
             // Insert the order into MongoDB
             ordersCollection.insertOne(order, (err, result) => {
